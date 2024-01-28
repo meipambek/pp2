@@ -18,3 +18,18 @@ dict
 
 #7
 bool
+
+#example 1
+x = 5
+print(type(x))
+
+#example 2
+x = "Hello World"
+
+#display x:
+print(x)
+
+#display the data type of x:
+print(type(x)) 
+
+
