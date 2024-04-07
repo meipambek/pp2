@@ -14,17 +14,17 @@ GREEN = (0, 255, 0)
 WHITE = (255, 255, 255)
 SCORE = 0
 clock = pygame.time.Clock()
-background = pygame.image.load('racer_inf/AnimatedStreet.png')
+background = pygame.image.load('AnimatedStreet.png')
 score_font = pygame.font.SysFont("Verdana", 30)
 life_font = pygame.font.SysFont("Verdana", 30)
-background_sound = pygame.mixer.Sound("racer_inf/background.wav")
-crush_sound = pygame.mixer.Sound("racer_inf/crash.wav")
+background_sound = pygame.mixer.Sound("background.wav")
+crush_sound = pygame.mixer.Sound("crash.wav")
 
 class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.speed = 5
-        self.image = pygame.image.load('racer_inf/Enemy.png')
+        self.image = pygame.image.load('Enemy.png')
         self.rect = self.image.get_rect()
         self.rect.center = (
             random.randint(self.rect.width, WIDTH - self.rect.width),
@@ -69,7 +69,7 @@ class Coin(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         global running
-        self.image = pygame.image.load("racer_inf/coin.png")
+        self.image = pygame.image.load("images/small_heart.png")
         self.speed = 7
         self.resized_image = pygame.transform.scale(self.image, (50, 50))
         self.rect = self.resized_image.get_rect()
